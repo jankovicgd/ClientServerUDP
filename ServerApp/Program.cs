@@ -1,15 +1,9 @@
 ﻿/* 
-* The purpose of this program is to provide a minimal example of using UDP to 
-* receive data.
-* It picks up broadcast packets and displays the text in a console window.
-* This was created to work with the program UDP_Minimum_Talker.
-* Run both programs, send data with Talker, receive the data with Listener.
-* Run multiple copies of each on multiple computers, within the same LAN of course.
-* If the broadcast packet contains numbers or binary data or anything other than 
-* plain text it may well crash and burn. 
-* Adding code to handle unexpected conditions such as that would defeat the 
-* simplistic nature of this example program. So would adding code for a gracefull
-* exit. Just kill it.
+* Svrha ovog programa je primer koriscenja UDP za primanje podataka.
+* Prima poruke sa klijenta i prikazuje ih u prozoru.
+* Radi sa programom UDP_minimum_talker
+* Pokrenu se oba programa i salju se poruke sa klijenta
+* Moguce je vise klijenta
 */
 using System;
 using System.Net;
@@ -29,7 +23,7 @@ public class UDPListener
         {
             while (!done)
             {
-                Console.WriteLine("Waiting for broadcast");
+                Console.WriteLine("Cekanje poruke");
                 // this is the line of code that receives the broadcase message.
                 // It calls the receive function from the object listener (class UdpClient)
                 // It passes to listener the end point groupEP.
@@ -39,7 +33,7 @@ public class UDPListener
                 // Contrast this with the talker code. It does not pass by reference.
                 // Note that this is a synchronous or blocking call.
                 receive_byte_array = listener.Receive(ref groupEP);
-                Console.WriteLine("Received a broadcast from {0}", groupEP.ToString());
+                Console.WriteLine("Primljena poruka od {0}", groupEP.ToString());
                 received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
                 Console.WriteLine("data follows \n{0}\n\n", received_data);
             }
@@ -51,4 +45,4 @@ public class UDPListener
         listener.Close();
         return 0;
     }
-} // end of class UDPListener
+}

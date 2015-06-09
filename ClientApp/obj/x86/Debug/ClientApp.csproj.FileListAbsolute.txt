@@ -2,3 +2,5 @@ d:\library\documents\visual studio 2010\Projects\ClientServerUDP\ClientApp\bin\D
 d:\library\documents\visual studio 2010\Projects\ClientServerUDP\ClientApp\bin\Debug\ClientApp.pdb
 d:\library\documents\visual studio 2010\Projects\ClientServerUDP\ClientApp\obj\x86\Debug\ClientApp.exe
 d:\library\documents\visual studio 2010\Projects\ClientServerUDP\ClientApp\obj\x86\Debug\ClientApp.pdb
+D:\Library\Documents\Visual Studio 2010\Projects\ClientServerUDP\ClientServerUDP\ClientApp\obj\x86\Debug\ClientApp.exe
+D:\Library\Documents\Visual Studio 2010\Projects\ClientServerUDP\ClientServerUDP\ClientApp\obj\x86\Debug\ClientApp.pdb
