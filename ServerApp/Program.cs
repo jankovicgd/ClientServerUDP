@@ -24,14 +24,11 @@ public class UDPListener
             while (!done)
             {
                 Console.WriteLine("Cekanje poruke");
-                // this is the line of code that receives the broadcase message.
-                // It calls the receive function from the object listener (class UdpClient)
-                // It passes to listener the end point groupEP.
+                // Prijem poruke
+                // Poziva funkciju recieve od listenera iz klase UDPListener
+                // Prosledjuje odsluskivacu groupEP - endpoint
                 // It puts the data from the broadcast message into the byte array
-                // named received_byte_array.
-                // I don't know why this uses the class UdpClient and IPEndPoint like this.
-                // Contrast this with the talker code. It does not pass by reference.
-                // Note that this is a synchronous or blocking call.
+                // Pretvara podatke poruke u niz bajtova recieved_byte_array
                 receive_byte_array = listener.Receive(ref groupEP);
                 Console.WriteLine("Primljena poruka od {0}", groupEP.ToString());
                 received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
