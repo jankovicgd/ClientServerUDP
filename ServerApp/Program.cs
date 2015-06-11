@@ -32,7 +32,7 @@ public class UDPListener
                 receive_byte_array = listener.Receive(ref groupEP);
                 Console.WriteLine("Primljena poruka od {0}", groupEP.ToString());
                 received_data = Encoding.ASCII.GetString(receive_byte_array, 0, receive_byte_array.Length);
-                Console.WriteLine("data follows \n{0}\n\n", received_data);
+                Console.WriteLine("Poruka \n{0}\n\n", received_data);
             }
         }
         catch (Exception e)
