@@ -14,7 +14,7 @@ class Program
         Boolean done = false;
         Boolean exception_thrown = false;
         #region comments
-        // Kreiranje socketa. Fundamentalna stvar za mrezne komunikacije. Specificiraju se:
+        // Kreiranje socketa. Fundamentalna jedinica za mrezne komunikacije. Specificiraju se:
         // Internetwork: koji se koristi za internet komunikacije
         // Dgram - datagram za emitovanje svima radije nego specificnom odsluskivacu
         // UDP: poruke su formirane kao user datagram protocol.
